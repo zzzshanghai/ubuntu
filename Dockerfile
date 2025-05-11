@@ -1,5 +1,7 @@
 FROM ubuntu:22.04
 
+LABEL maintainer="vevc <https://github.com/vevc>"
+
 ENV TZ=Asia/Shanghai \
     SSH_USER=ubuntn \
     SSH_PASSWORD=ubuntu!23
