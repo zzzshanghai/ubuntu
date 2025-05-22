@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
 
-LABEL maintainer="vevc <https://github.com/vevc>"
+LABEL org.opencontainers.image.source="https://github.com/vevc/ubuntu"
 
 ENV TZ=Asia/Shanghai \
     SSH_USER=ubuntn \
