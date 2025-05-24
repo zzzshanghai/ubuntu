@@ -3,7 +3,7 @@ FROM ubuntu:22.04
 LABEL org.opencontainers.image.source="https://github.com/vevc/ubuntu"
 
 ENV TZ=Asia/Shanghai \
-    SSH_USER=ubuntn \
+    SSH_USER=ubuntu \
     SSH_PASSWORD=ubuntu!23
 
 COPY entrypoint.sh /entrypoint.sh
