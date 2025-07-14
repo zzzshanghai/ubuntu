@@ -7,6 +7,7 @@ ENV TZ=Asia/Shanghai \
     SSH_PASSWORD=ubuntu!23
 
 COPY entrypoint.sh /entrypoint.sh
+COPY reboot.sh /usr/local/sbin/reboot
 
 RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update; \
@@ -15,6 +16,7 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     rm -rf /var/lib/apt/lists/*; \
     mkdir /var/run/sshd; \
     chmod +x /entrypoint.sh; \
+    chmod +x /usr/local/sbin/reboot; \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime; \
     echo $TZ > /etc/timezone
 
