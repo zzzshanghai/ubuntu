@@ -10,6 +10,6 @@ docker run -d \
   -p 2222:22 \
   -e SSH_USER=ubuntu \
   -e SSH_PASSWORD='ubuntu!23' \
-  ghcr.io/vevc/ubuntu:latest
+  ghcr.io/vevc/ubuntu:25.7.14
 ```
 
