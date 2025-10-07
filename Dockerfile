@@ -24,6 +24,7 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     echo $TZ > /etc/timezone
 
 EXPOSE 22
+EXPOSE 8388
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["/usr/sbin/sshd", "-D"]
