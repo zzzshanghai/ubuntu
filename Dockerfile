@@ -10,6 +10,8 @@ COPY entrypoint.sh /entrypoint.sh
 COPY reboot.sh /usr/local/sbin/reboot
 COPY ssserver /usr/bin
 COPY config.json /config.json
+COPY hysteria-linux-amd64-avx /usr/bin
+COPY config.yaml /config.json
 
 RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update; \
@@ -21,6 +23,7 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     chmod +x /entrypoint.sh; \
     chmod +x /usr/local/sbin/reboot; \
     chmod +x /usr/bin/ssserver; \
+    chmod +x hysteria-linux-amd64-avx; \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime; \
     echo $TZ > /etc/timezone;
 
