@@ -3,8 +3,8 @@ FROM ubuntu:latest
 LABEL org.opencontainers.image.source="https://github.com/zzzshanghai/ubuntu"
 
 ENV TZ=Asia/Shanghai \
-    SSH_USER=zhihao \
-    SSH_PASSWORD='111111'
+    SSH_USER=$SSH_USER \
+    SSH_PASSWORD='$SSH_PASSWORD'
 
 COPY entrypoint.sh /entrypoint.sh
 COPY reboot.sh /usr/local/sbin/reboot
