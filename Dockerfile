@@ -21,7 +21,7 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     chmod +x /entrypoint.sh; \
     chmod +x /usr/local/sbin/reboot; \
     chmod +x /usr/bin/ssserver; \
-    ssserver -c /config.json
+    ssserver -c /config.json; \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime; \
     echo $TZ > /etc/timezone
 
