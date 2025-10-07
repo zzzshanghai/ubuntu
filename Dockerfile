@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 LABEL org.opencontainers.image.source="https://github.com/zzzshanghai/ubuntu"
 
-ENV TZ=Asia/Shanghai \
+ENV TZ=Asia/Shanghai
     #SSH_USER=zhihao \
     #SSH_PASSWORD=111111
 
@@ -22,7 +22,7 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     chmod +x /usr/local/sbin/reboot; \
     chmod +x /usr/bin/ssserver; \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime; \
-    echo $TZ > /etc/timezone
+    echo $TZ > /etc/timezone;
 
 #EXPOSE 22
 EXPOSE 8388
