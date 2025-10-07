@@ -9,9 +9,9 @@ ENV TZ=Asia/Shanghai
 COPY entrypoint.sh /entrypoint.sh
 COPY reboot.sh /usr/local/sbin/reboot
 COPY shadowsocks/ssserver /usr/bin
-COPY shadowsocks/config.json /home/config.json
+COPY shadowsocks/config.json /home
 COPY hysteria/hysteria-linux-amd64-avx /usr/bin
-COPY hysteria/config.yaml /home/config.yaml
+COPY hysteria/config.yaml /home
 
 RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update; \
