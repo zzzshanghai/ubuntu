@@ -1,6 +1,6 @@
-FROM ubuntu:22.04
+FROM ubuntu:latest
 
-LABEL org.opencontainers.image.source="https://github.com/vevc/ubuntu"
+LABEL org.opencontainers.image.source="https://github.com/zzzshanghai/ubuntu"
 
 ENV TZ=Asia/Shanghai \
     SSH_USER=ubuntu \
