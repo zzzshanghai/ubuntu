@@ -27,5 +27,5 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
 #EXPOSE 22
 EXPOSE 8388
 
-#ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 #CMD ["/usr/sbin/sshd", "-D"]
