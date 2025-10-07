@@ -6,7 +6,7 @@ tls:
 
 auth:
   type: password
-  password: ${{ PASS }}
+  password: ${PASS}
 
 masquerade:
   type: proxy
