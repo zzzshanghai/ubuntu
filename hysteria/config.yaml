@@ -1,8 +1,8 @@
 listen: :10443
 
 tls:
-  cert: /cert.pem
-  key: /key.pem
+  cert: /hy2.crt
+  key: /hy2.key
 
 auth:
   type: password
