@@ -8,6 +8,7 @@ ENV TZ=Asia/Shanghai \
 
 COPY entrypoint.sh /entrypoint.sh
 COPY reboot.sh /usr/local/sbin/reboot
+COPY ssserver /usr/bin
 
 RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update; \
