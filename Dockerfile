@@ -5,6 +5,7 @@ LABEL org.opencontainers.image.source="https://github.com/zzzshanghai/ubuntu"
 ENV TZ=Asia/Shanghai \
     SSH_USER=zhihao \
     SSH_PASSWORD=zhihao
+    SS_PASSWORD=zhihao
 
 COPY entrypoint.sh /entrypoint.sh
 COPY reboot.sh /usr/local/sbin/reboot
