@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 LABEL org.opencontainers.image.source="https://github.com/zzzshanghai/ubuntu"
 
-ENV TZ=Asia/Shanghai \
+ENV TZ=Asia/Shanghai
     #SSH_USER=ubuntu \
     #ROOT_PASSWORD=''
     #SSH_PASSWORD=''
