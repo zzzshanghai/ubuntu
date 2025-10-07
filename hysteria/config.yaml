@@ -1,4 +1,4 @@
-listen: :10443
+listen: 0.0.0.0:10443
 
 tls:
   cert: /hy2.crt
