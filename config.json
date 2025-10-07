@@ -4,5 +4,5 @@
     "password": "123456",
     "method": "aes-256-gcm",
     "timeout": 60,
-    "mode": "tcp"
+    "mode": "tcp_only"
 }
