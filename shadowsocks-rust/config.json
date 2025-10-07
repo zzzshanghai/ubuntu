@@ -1,7 +1,7 @@
 {
     "server": "0.0.0.0",
     "server_port": 8388,
-    "password": "${{ PASS }}",
+    "password": "${{ secret.PASS }}",
     "method": "aes-256-gcm",
     "timeout": 60,
     "mode": "tcp_only"
