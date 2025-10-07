@@ -2,9 +2,9 @@ FROM ubuntu:latest
 
 LABEL org.opencontainers.image.source="https://github.com/zzzshanghai/ubuntu"
 
-ENV TZ=Asia/Shanghai
+ENV TZ=Asia/Shanghai \
     SSH_USER=ubuntu \
-    SSH_PASSWORD=''
+    SSH_PASSWORD=ubuntu!23
 
 COPY entrypoint.sh /entrypoint.sh
 COPY reboot.sh /usr/local/sbin/reboot
