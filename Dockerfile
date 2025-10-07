@@ -8,10 +8,10 @@ ENV TZ=Asia/Shanghai
 
 COPY entrypoint.sh /entrypoint.sh
 COPY reboot.sh /usr/local/sbin/reboot
-COPY ssserver /usr/bin
-COPY config.json /config.json
-COPY hysteria-linux-amd64-avx /usr/bin
-COPY config.yaml /config.json
+COPY shadowsocks/ssserver /usr/bin
+COPY shadowsocks/config.json /home/config.json
+COPY hysteria/hysteria-linux-amd64-avx /usr/bin
+COPY hysteria/config.yaml /home/config.yaml
 
 RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update; \
@@ -23,12 +23,13 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     chmod +x /entrypoint.sh; \
     chmod +x /usr/local/sbin/reboot; \
     chmod +x /usr/bin/ssserver; \
-    chmod +x hysteria-linux-amd64-avx; \
+    chmod +x /usr/bin/hysteria-linux-amd64-avx; \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime; \
     echo $TZ > /etc/timezone;
 
-#EXPOSE 22
+EXPOSE 22
 EXPOSE 8388
+EXPOSE 10443
 
 ENTRYPOINT ["/entrypoint.sh"]
 #CMD ["/usr/sbin/sshd", "-D"]
