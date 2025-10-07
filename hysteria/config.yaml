@@ -12,5 +12,3 @@ masquerade:
   proxy:
     url: https://bing.com/
     rewriteHost: true
-
-EOF
