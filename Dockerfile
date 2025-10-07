@@ -27,9 +27,9 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime; \
     echo $TZ > /etc/timezone;
 
-EXPOSE 22
+#EXPOSE 22
 EXPOSE 8388
-EXPOSE 10443
+#EXPOSE 10443
 
 ENTRYPOINT ["/entrypoint.sh"]
 #CMD ["/usr/sbin/sshd", "-D"]
