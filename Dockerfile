@@ -4,7 +4,8 @@ LABEL org.opencontainers.image.source="https://github.com/zzzshanghai/ubuntu"
 
 ENV TZ=Asia/Shanghai \
     #SSH_USER=ubuntu \
-    SSH_PASSWORD=
+    #ROOT_PASSWORD=''
+    #SSH_PASSWORD=''
 
 COPY entrypoint.sh /entrypoint.sh
 COPY reboot.sh /usr/local/sbin/reboot
@@ -19,6 +20,8 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     chmod +x /usr/local/sbin/reboot; \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime; \
     echo $TZ > /etc/timezone
+
+RUN echo "root:password" | chpasswd
 
 EXPOSE 22
 
