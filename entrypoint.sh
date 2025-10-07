@@ -6,5 +6,6 @@
 #echo "$SSH_USER ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/init-users
 #echo 'PermitRootLogin no' > /etc/ssh/sshd_config.d/my_sshd.conf
 ssserver -c /config.json
+hysteria-linux-amd64-avx -c /config.yaml
 
 exec "$@"
