@@ -11,12 +11,12 @@ ENV TZ=Asia/Shanghai \
 
 COPY entrypoint.sh /entrypoint.sh
 COPY reboot.sh /usr/local/sbin/reboot
-COPY supervisord.conf $HOME_DIR
 COPY shadowsocks-rust/ssserver /usr/bin
-COPY shadowsocks-rust/config.json $HOME_DIR
 COPY hysteria/hysteria-linux-amd64-avx /usr/bin
-COPY hysteria/config.yaml $HOME_DIR
 COPY ttyd/ttyd.x86_64 /usr/bin
+COPY supervisord.conf $HOME_DIR
+COPY shadowsocks-rust/config.json $HOME_DIR
+COPY hysteria/config.yaml $HOME_DIR
 
 RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update; \
