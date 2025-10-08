@@ -1,6 +1,10 @@
 name: Build and Push alpine Docker image
 
 on:
+  push:
+    branches:
+      - alpine
+
   workflow_dispatch:
 
 jobs:
