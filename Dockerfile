@@ -35,6 +35,5 @@ EXPOSE 7681
 EXPOSE 8388
 EXPOSE 10443
 
-#ENTRYPOINT ["/entrypoint.sh"]
-ENTRYPOINT ["ttyd.x86_64"]
+ENTRYPOINT ["/entrypoint.sh"]
 #CMD ["/usr/sbin/sshd", "-D"]
