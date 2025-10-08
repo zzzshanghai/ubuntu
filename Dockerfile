@@ -5,7 +5,7 @@ MAINTAINER zzzshanghai
 LABEL org.opencontainers.image.source="https://github.com/zzzshanghai/ubuntu"
 
 ENV TZ=Asia/Shanghai \
-    #SSH_USER=test \
+    SSH_USER=zhihao \
     SSH_PASSWORD=test
 
 COPY entrypoint.sh /entrypoint.sh
