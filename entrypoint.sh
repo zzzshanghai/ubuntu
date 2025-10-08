@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
 
-echo "$SSH_USER:$SSH_PASSWORD" | chpasswd
 useradd -m -s /bin/bash $SSH_USER
 echo "$SSH_USER:$SSH_PASSWORD" | chpasswd
 usermod -aG sudo $SSH_USER
