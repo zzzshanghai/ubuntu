@@ -1,18 +1,20 @@
 FROM ubuntu:latest
 
+MAINTAINER zzzshanghai
+
 LABEL org.opencontainers.image.source="https://github.com/zzzshanghai/ubuntu"
 
 ENV TZ=Asia/Shanghai \
-    SSH_USER=test \
+    #SSH_USER=test \
     SSH_PASSWORD=test
 
 COPY entrypoint.sh /entrypoint.sh
 COPY reboot.sh /usr/local/sbin/reboot
-COPY supervisord.conf /home
+COPY supervisord.conf /root
 COPY shadowsocks-rust/ssserver /usr/bin
-COPY shadowsocks-rust/config.json /home
+COPY shadowsocks-rust/config.json /root
 COPY hysteria/hysteria-linux-amd64-avx /usr/bin
-COPY hysteria/config.yaml /home
+COPY hysteria/config.yaml /root
 COPY ttyd/ttyd.x86_64 /usr/bin
 
 RUN export DEBIAN_FRONTEND=noninteractive; \
