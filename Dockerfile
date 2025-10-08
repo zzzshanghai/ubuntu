@@ -1,7 +1,5 @@
 FROM ubuntu:latest
 
-MAINTAINER zzzshanghai
-
 LABEL org.opencontainers.image.source="https://github.com/zzzshanghai/ubuntu"
 
 ENV TZ=Asia/Shanghai \
