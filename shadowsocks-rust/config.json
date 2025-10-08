@@ -1,7 +1,7 @@
 {
     "server": "0.0.0.0",
     "server_port": 8388,
-    "password": "{{ .secrets.SSH_PASSWORD }}",
+    "password": $SSH_PASSWORD,
     "method": "aes-256-gcm",
     "timeout": 60,
     "mode": "tcp_only"
