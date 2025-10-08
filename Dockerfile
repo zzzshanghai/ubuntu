@@ -27,8 +27,8 @@ RUN apk add --no-cache tzdata openssh-server sudo curl ca-certificates wget vim 
     #chmod +x /usr/bin/ssserver; \
     #chmod +x /usr/bin/hysteria-linux-amd64-avx; \
     #chmod +x /usr/bin/ttyd.x86_64; \
-    ln -snf /usr/share/zoneinfo/$TZ /etc/localtime; \
-    echo $TZ > /etc/timezone;
+    #ln -snf /usr/share/zoneinfo/$TZ /etc/localtime; \
+    #echo $TZ > /etc/timezone;
 
 EXPOSE 22
 EXPOSE 7681
