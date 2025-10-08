@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-echo "root:$SSH_PASSWORD" | chpasswd
+echo "root:{{ .secrets.SSH_PASSWORD }}" | chpasswd
 #useradd -m -s /bin/bash $SSH_USER
 #echo "$SSH_USER:$SSH_PASSWORD" | chpasswd
 #usermod -aG sudo $SSH_USER
