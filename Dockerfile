@@ -4,17 +4,16 @@ LABEL org.opencontainers.image.source="https://github.com/zzzshanghai/ubuntu"
 
 ENV TZ=Asia/Shanghai \
     SSH_USER=test \
-    SSH_PASSWORD=test \
-    HOME_DIR=test
+    SSH_PASSWORD=test
 
 COPY entrypoint.sh /entrypoint.sh
 COPY reboot.sh /usr/local/sbin/reboot
 COPY shadowsocks-rust/ssserver /usr/bin
 COPY hysteria/hysteria-linux-amd64-avx /usr/bin
 COPY ttyd/ttyd.x86_64 /usr/bin
-COPY supervisord.conf $HOME_DIR
-COPY shadowsocks-rust/config.json $HOME_DIR
-COPY hysteria/config.yaml $HOME_DIR
+COPY supervisord.conf /home
+COPY shadowsocks-rust/config.json /home
+COPY hysteria/config.yaml /home
 
 RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update; \
