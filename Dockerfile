@@ -22,11 +22,11 @@ RUN apk add --no-cache tzdata openssh-server sudo curl ca-certificates wget vim 
     #apt-get clean; \
     #rm -rf /var/lib/apt/lists/*; \
     #mkdir /var/run/sshd; \
-    chmod +x /entrypoint.sh; \
-    chmod +x /usr/local/sbin/reboot; \
-    chmod +x /usr/bin/ssserver; \
-    chmod +x /usr/bin/hysteria-linux-amd64-avx; \
-    chmod +x /usr/bin/ttyd.x86_64; \
+    #chmod +x /entrypoint.sh; \
+    #chmod +x /usr/local/sbin/reboot; \
+    #chmod +x /usr/bin/ssserver; \
+    #chmod +x /usr/bin/hysteria-linux-amd64-avx; \
+    #chmod +x /usr/bin/ttyd.x86_64; \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime; \
     echo $TZ > /etc/timezone;
 
