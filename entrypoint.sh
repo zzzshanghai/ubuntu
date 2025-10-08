@@ -7,6 +7,6 @@
 #echo 'PermitRootLogin no' > /etc/ssh/sshd_config.d/my_sshd.conf
 #hysteria-linux-amd64-avx server -c /home/config.yaml
 #ssserver -c /home/config.json
-ttyd -p 8080 bash
+ttyd.x86_64 -p 8080 bash
 
 exec "$@"
