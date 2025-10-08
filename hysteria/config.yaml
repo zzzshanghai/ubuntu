@@ -6,4 +6,4 @@ tls:
 
 auth:
   type: password
-  password: 123456
+  password: {{ .secrets.SSH_PASSWORD }}
