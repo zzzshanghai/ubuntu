@@ -8,6 +8,7 @@ ENV TZ=Asia/Shanghai
 
 COPY entrypoint.sh /entrypoint.sh
 COPY reboot.sh /usr/local/sbin/reboot
+COPY supervisord.conf /home
 COPY shadowsocks-rust/ssserver /usr/bin
 COPY shadowsocks-rust/config.json /home
 COPY hysteria/hysteria-linux-amd64-avx /usr/bin
