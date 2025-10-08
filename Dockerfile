@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM alpine:latest
 
 LABEL org.opencontainers.image.source="https://github.com/zzzshanghai/ubuntu"
 
@@ -15,10 +15,11 @@ COPY supervisord.conf /home
 COPY shadowsocks-rust/config.json /home
 COPY hysteria/config.yaml /home
 
-RUN export DEBIAN_FRONTEND=noninteractive; \
-    apt-get update; \
-    apt-get install -y tzdata openssh-server sudo curl ca-certificates wget vim net-tools supervisor cron unzip iputils-ping telnet git iproute2 --no-install-recommends; \
-    apt-get clean; \
+RUN apk add --no-cache tzdata openssh-server sudo curl ca-certificates wget vim net-tools supervisor unzip iputils-ping git iproute2
+    #export DEBIAN_FRONTEND=noninteractive; \
+    #apt-get update; \
+    #apt-get install -y tzdata openssh-server sudo curl ca-certificates wget vim net-tools supervisor cron unzip iputils-ping telnet git iproute2 --no-install-recommends; \
+    #apt-get clean; \
     rm -rf /var/lib/apt/lists/*; \
     mkdir /var/run/sshd; \
     chmod +x /entrypoint.sh; \
