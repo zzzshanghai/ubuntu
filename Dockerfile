@@ -18,7 +18,6 @@ COPY hysteria/config.yaml /home
 RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update; \
     apt-get install -y tzdata openssh-server sudo curl ca-certificates wget vim net-tools supervisor cron unzip iputils-ping telnet git iproute2 --no-install-recommends; \
-    apt-get update; \
     apt-get clean; \
     rm -rf /var/lib/apt/lists/*; \
     mkdir /var/run/sshd; \
