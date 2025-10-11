@@ -1,8 +1,8 @@
 listen: 0.0.0.0:10443
 
 tls:
-  cert: /hy2.crt
-  key: /hy2.key
+  cert: /home/zhihao/hy2.crt
+  key: /home/zhihao/hy2.key
 
 auth:
   type: password
