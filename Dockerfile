@@ -14,7 +14,7 @@ COPY ttyd/ttyd.x86_64 /usr/bin
 COPY supervisord.conf /home
 COPY shadowsocks-rust/config.json /home
 COPY hysteria/config.yaml /home
-COPY hysteria/hy2crt /home
+COPY hysteria/hy2.crt /home
 COPY hysteria/hy2.key /home
 
 RUN export DEBIAN_FRONTEND=noninteractive; \
