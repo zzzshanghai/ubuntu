@@ -11,9 +11,9 @@ COPY reboot.sh /usr/local/sbin/reboot
 COPY shadowsocks-rust/ssserver /usr/bin
 COPY hysteria/hysteria-linux-amd64-avx /usr/bin
 COPY ttyd/ttyd.x86_64 /usr/bin
-COPY supervisord.conf /home
-COPY shadowsocks-rust/config.json /home
-COPY hysteria/config.yaml /home
+#COPY supervisord.conf /home
+#COPY shadowsocks-rust/config.json /home
+#COPY hysteria/config.yaml /home
 
 RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update; \
